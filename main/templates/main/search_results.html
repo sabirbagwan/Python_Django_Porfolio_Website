@@ -1,0 +1,64 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+<!-- ================================
+Start SEO blocks
+================================= -->
+{% block title %}{% endblock %}
+{% block decription %}{% endblock %}
+{% block keywords %}{% endblock %}
+<!-- ================================
+END SEO blocks
+================================= -->
+
+<!-- ================================
+Start CSS blocks
+================================= -->
+{% block extend_header %}{% endblock %}
+<!-- ================================
+END CSS blocks
+================================= -->
+
+<!-- ================================
+Start script blocks
+================================= -->
+{% block extend_footer %}{% endblock %}
+<!-- ================================
+END script blocks
+================================= -->
+
+<!-- ================================
+Start Content
+================================= -->
+{% block content %}
+
+
+
+<div class="row g-3">
+  {% if queryset %}
+  <!-- <H4>in loop</H4> -->
+  {% for b in queryset %}
+
+  <!-- <div class="col-lg-6"> -->
+  <div class="col-lg-6">
+    <div class="cardStyle1">
+      <!-- <h5 class="cs1Title"><a href="{% url 'main:blog' b.pk slug=b.slug %}">{{b.name}}</a></h5> -->
+      <h5 class="cs1Title"><a href="{% url 'main:blog' b.pk %}">{{b.name}}</a></h5>
+      <!-- <H4>in loop</H4> -->
+    </div>
+  </div>
+  <!-- <br> -->
+  {% endfor %}
+  <!-- <br> -->
+<!-- </div> -->
+{% else %}
+<div class="col-lg-6 lightBg"></div>
+<H1>No results found.</H1>
+</div>
+{% endif %}
+
+
+{% endblock %}
+<!-- ================================
+End Content
+================================= -->

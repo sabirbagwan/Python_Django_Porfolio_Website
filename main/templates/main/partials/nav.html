@@ -1,0 +1,89 @@
+{% load static %}
+<!-- ================================
+Start Navigation Bar
+================================= -->
+<header>
+    <link rel="icon" href="{% static 'images/icoico.ico' %}">
+    <script src="{% static 'js/tinymce.min.js' %}"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="{% static 'css/prism.css' %}"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="static/css/prism.css"> -->
+    <!-- <script src="prism.js"></script> -->
+    <!-- <pre class="language-markup"><code>...</code></pre> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-4Dl/Y+gYX9J9S2EFbPmv8clvO+ofckyHk+aO+fJ1Gq3YnyF6UZ0sByZojB+OVT8MvR6F+uH7BGwBrWgOkd/7Lw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Add CSS link to PrismJS -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" /> -->
+
+    <!-- Add JS link to PrismJS -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script> -->
+
+    <!-- Add PrismJS languages you want to support -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components -->
+
+
+    <link rel=" stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/copy-code-button.css' %}">
+
+
+
+
+
+    <div class="headerCol">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+
+                <div class="col-auto">
+
+
+
+
+                    <!-- <div class="navbar-header d-flex align-items-center justify-content-between"> -->
+                    <div class="navbar-header d-flex">
+                        <!-- Navbar Brand -->
+                        <a href="/" class="navbar-brand name-main-body">Sabir Bagwan</a>
+                        <!-- <div class="logoCol"><a href="{% url 'main:home' %}"><img src="{% static 'images/logo.png' %}" -->
+                        <!-- alt="..."></a></div> -->
+                        <!-- Toggle Button-->
+                        <button type="button" data-toggle="collapse" data-target="#navbarcollapse"
+                            aria-controls="navbarcollapse" aria-expanded="false" aria-label="Toggle navigation"
+                            class="navbar-toggler"><span></span><span></span><span></span></button>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="d-md-none">
+                        <button class="navToggle">
+                            <span class="navToggle__text">Toggle Menu</span>
+                        </button>
+                    </div>
+                    <div class="navCollapseCol">
+                        <div class="navCol">
+                            <ul>
+                                <li>
+                                    <form method="get" action="{% url 'main:search_results' %}">
+                                        <input class="form-control mr-sm-2" type="text" name="q"
+                                            placeholder="Search blogs">
+                                </li>
+                                <li>
+                                    <button class="butt-control" type="submit">Search</button>
+                                    </form>
+                                </li>
+
+                                <li><a href="{%url 'main:home'%}">Home</a></li>
+                                <li><a href="{% url 'main:blogs' %}">Blog</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- ================================
+End Navigation Bar
+================================= -->

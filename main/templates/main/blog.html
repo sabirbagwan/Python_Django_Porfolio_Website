@@ -1,0 +1,81 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}{% endblock %}
+{% block decription %}{% endblock %}
+{% block keywords %}{% endblock %}
+<!-- ================================
+END SEO blocks
+================================= -->
+
+<!-- ================================
+Start CSS blocks
+================================= -->
+{% block extend_header %}{% endblock %}
+<!-- ================================
+END CSS blocks
+================================= -->
+
+<!-- ================================
+Start script blocks
+================================= -->
+{% block extend_footer %}{% endblock %}
+<!-- ================================
+END script blocks
+================================= -->
+
+<!-- ================================
+Start Content
+================================= -->
+{% block content %}
+<section>
+  <div class="innerPageBannerCol">
+    <div class="container">
+      <div class="row g-4 g-md-3  align-items-center">
+        <div class="col-md-6">
+          <div class="bannerContent">
+            <h2>Blogs</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- <div class="container">
+</div> -->
+<section>
+  <div class="lightBg">
+    <div class="container">
+      <div class="row g-3">
+        {% for b in object_list %}
+        <div class="col-lg-6">
+          <div class="cardStyle1">
+            <h5 class="cs1Title"><a href="{% url 'main:blog' slug=b.slug %}">{{b.name}}</a></h5>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <br>
+
+      <div class="container pagina">
+        {% if page_obj.has_previous %}
+        <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
+        {% endif %}
+        {% for page in page_obj %}
+        
+        {% endfor %}
+        {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}">Next</a>
+        {% endif %}
+      </div>
+    
+
+      <br>
+    </div>
+  </div>
+</section>
+
+{%endblock%}
+

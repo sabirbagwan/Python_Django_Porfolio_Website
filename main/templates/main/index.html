@@ -1,0 +1,97 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+<!-- ================================
+Start SEO blocks
+================================= -->
+{% block title %}{% endblock %}
+{% block decription %}{% endblock %}
+{% block keywords %}{% endblock %}
+<!-- ================================
+END SEO blocks
+================================= -->
+
+<!-- ================================
+Start CSS blocks
+================================= -->
+{% block extend_header %}{% endblock %}
+<!-- ================================
+END CSS blocks
+================================= -->
+
+<!-- ================================
+Start script blocks
+================================= -->
+{% block extend_footer %}{% endblock %}
+<!-- ================================
+END script blocks
+================================= -->
+
+<!-- ================================
+Start Content
+================================= -->
+{% block content %}
+
+
+<br>
+
+
+
+<section>
+  <div class="bannerSection lightBg">
+    <div class="container">
+      <div class="row g-4 g-md-3  align-items-center">
+        <div class="col-md-auto order-md-last">
+          <div class="bannerUserImg">
+            <img src="{{me.userprofile.avatar.url}}" alt="{{me.first_name|title}} {{me.last_name|title}} avatar">
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="bannerContent">
+
+            <div class="col-xs-12 col-md-12 textabout">
+              <h3>About me</h3>
+              <br>
+    
+              <p>
+                My interest is in
+                Data Science and Machine Learning. I am a self-taught individual, still
+                learning from the open-source community
+                online.
+              </p>
+          
+              <p>
+                You can reach out for any work/research-related thing.
+              </p>
+            </div>
+            <br>
+            <br>
+            <h3>Connect</h3>
+            <br>
+
+            <!-- <a href="https://www.youtube.com/channel/UC6LkbaDj388qSv3WAVhg_4A" target="_blank" title="" class="fa-icon">
+              <i class="fa fa-youtube"></i>
+            </a> -->
+            <a href=" " target="_blank" title="" class="fa-icon">
+              <i class="fa fa-github"></i>
+            </a>
+            <a href=" " target="_blank" title="" class="fa-icon">
+              <i class="fa fa-twitter"></i>
+            </a>
+            <a href=" " target="_blank" title="" class="fa-icon">
+              <i class="fa fa-linkedin"></i>
+            </a>
+            </a>
+            <a href="mailto:s " target="_blank" title="" class="fa-icon">
+              <i class="fa fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+<!-- ================================
+End Content
+================================= -->
